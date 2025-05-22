@@ -1,5 +1,5 @@
-import './globals.css'
 import './clerk.css'
+import './globals.css'
 import './prism.css'
 
 import { ClerkProvider } from '@clerk/nextjs'
@@ -14,7 +14,7 @@ import { seo } from '~/lib/seo'
 export const metadata: Metadata = {
   metadataBase: seo.url,
   title: {
-    template: '%s | Cali Castle',
+    template: '%s | Nik',
     default: seo.title,
   },
   description: seo.description,
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: {
       default: seo.title,
-      template: '%s | Cali Castle',
+      template: '%s | Nik',
     },
     description: seo.description,
-    siteName: 'Cali Castle',
+    siteName: 'Nik',
     locale: 'zh_CN',
     type: 'website',
-    url: 'https://cali.so',
+    url: 'https://nikdev.cn',
   },
   twitter: {
     site: '@thecalicastle',
