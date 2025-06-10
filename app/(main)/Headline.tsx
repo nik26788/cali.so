@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion'
 import Balancer from 'react-wrap-balancer'
 
+import { useTheme } from 'next-themes'
+import { FpvIcon } from '~/assets'
 import { SocialLink } from '~/components/links/SocialLink'
 
 function Developer() {
@@ -16,7 +18,13 @@ function Developer() {
 }
 
 function Designer() {
-  return <span className="group relative ">FPV无人机探索者</span>
+  const { theme } = useTheme()
+  return (
+    <span className="group inline-flex items-center">
+      <FpvIcon className="mr-1 transform-gpu transition-transform duration-300 group-hover:rotate-90" />
+      <span>FPV无人机探索者</span>
+    </span>
+  )
 }
 
 // function OCD() {
@@ -39,7 +47,7 @@ function Designer() {
 
 export function Headline() {
   return (
-    <div className="max-w-3xl">
+    <div className="max-w-2xl">
       <motion.h1
         className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
         initial={{ opacity: 0, y: 30 }}
@@ -51,7 +59,8 @@ export function Headline() {
           duration: 0.3,
         }}
       >
-        <Developer />，
+        <Developer />
+        <br />
         <Designer />
         <span className="block h-2" />
         {/* <OCD />，<Founder /> */}
